@@ -1,0 +1,50 @@
+[2018-06-19 14:49:25.521] [INFO] logger - Server listen on port 5050
+[2018-06-19 16:27:59.595] [INFO] logger - Server listen on port 5050
+[2018-06-19 16:28:37.869] [INFO] logger - channel add>>>{"channel":"22"}
+[2018-06-19 16:28:37.870] [INFO] logger - addChannel to 22
+[2018-06-19 16:28:37.870] [INFO] logger - after addChannel: [22]
+[2018-06-19 16:29:06.871] [INFO] logger - channel add>>>{"channel":"222"}
+[2018-06-19 16:29:06.872] [INFO] logger - addChannel to 222
+[2018-06-19 16:29:06.873] [INFO] logger - after addChannel: [22][222]
+[2018-06-19 16:29:06.889] [INFO] logger - Someone connect to 222:1
+[2018-06-19 16:32:58.602] [INFO] logger - Someone disconnect from 222:0
+[2018-06-19 16:38:22.646] [INFO] logger - channel add>>>{"channel":"222"}
+[2018-06-19 16:38:22.647] [INFO] logger - addChannel to 222
+[2018-06-19 16:38:22.648] [INFO] logger - after addChannel: [22][222]
+[2018-06-19 16:38:22.660] [INFO] logger - Someone connect to 222:1
+[2018-06-19 16:39:13.501] [INFO] logger - Someone disconnect from 222:0
+[2018-06-19 16:55:34.694] [INFO] logger - channel add>>>{"channel":"room001"}
+[2018-06-19 16:55:34.695] [INFO] logger - addChannel to room001
+[2018-06-19 16:55:34.695] [INFO] logger - after addChannel: [22][222][room001]
+[2018-06-19 16:55:34.706] [INFO] logger - Someone connect to room001:1
+[2018-06-19 16:55:43.604] [INFO] logger - channel broadcast>>>{"channel":"room001","event":"message-add","data":{"name":"qingpeng","message":"hello"}}
+[2018-06-19 16:56:03.918] [INFO] logger - channel add>>>{"channel":"room001"}
+[2018-06-19 16:56:03.919] [INFO] logger - addChannel to room001
+[2018-06-19 16:56:03.919] [INFO] logger - after addChannel: [22][222][room001]
+[2018-06-19 16:56:03.930] [INFO] logger - Someone connect to room001:2
+[2018-06-19 16:56:11.972] [INFO] logger - channel broadcast>>>{"channel":"room001","event":"message-add","data":{"name":"2b","message":"dddd"}}
+[2018-06-19 16:56:15.571] [INFO] logger - channel broadcast>>>{"channel":"room001","event":"message-add","data":{"name":"qingpeng","message":"hello2"}}
+[2018-06-19 16:58:49.701] [INFO] logger - channel broadcast>>>{"channel":"room001","event":"message-add","data":{"name":"qingpeng","message":"hello2"}}
+[2018-06-19 16:58:52.756] [INFO] logger - channel broadcast>>>{"channel":"room001","event":"message-add","data":{"name":"2b","message":"dddd33"}}
+[2018-06-19 16:58:56.476] [INFO] logger - channel add>>>{"channel":"2222"}
+[2018-06-19 16:58:56.477] [INFO] logger - addChannel to 2222
+[2018-06-19 16:58:56.477] [INFO] logger - after addChannel: [22][222][room001][2222]
+[2018-06-19 16:58:56.479] [INFO] logger - Someone connect to 2222:1
+[2018-06-19 16:58:59.813] [INFO] logger - channel add>>>{"channel":"2222"}
+[2018-06-19 16:58:59.813] [INFO] logger - addChannel to 2222
+[2018-06-19 16:58:59.813] [INFO] logger - after addChannel: [22][222][room001][2222]
+[2018-06-19 16:58:59.816] [INFO] logger - Someone connect to 2222:2
+[2018-06-19 16:59:01.795] [INFO] logger - channel broadcast>>>{"channel":"2222","event":"message-add","data":{"name":"qingpeng","message":"hello2"}}
+[2018-06-19 16:59:03.467] [INFO] logger - channel broadcast>>>{"channel":"2222","event":"message-add","data":{"name":"2b","message":"dddd33"}}
+[2018-06-19 16:59:05.411] [INFO] logger - channel add>>>{"channel":"222222"}
+[2018-06-19 16:59:05.412] [INFO] logger - addChannel to 222222
+[2018-06-19 16:59:05.412] [INFO] logger - after addChannel: [22][222][room001][2222][222222]
+[2018-06-19 16:59:05.414] [INFO] logger - Someone connect to 222222:1
+[2018-06-19 16:59:06.899] [INFO] logger - channel broadcast>>>{"channel":"222222","event":"message-add","data":{"name":"2b","message":"dddd33"}}
+[2018-06-19 16:59:07.939] [INFO] logger - channel broadcast>>>{"channel":"2222","event":"message-add","data":{"name":"qingpeng","message":"hello2"}}
+[2018-06-19 16:59:09.843] [INFO] logger - channel broadcast>>>{"channel":"222222","event":"message-add","data":{"name":"2b","message":"dddd33"}}
+[2018-06-19 17:06:55.158] [INFO] logger - Someone disconnect from room001:1
+[2018-06-19 17:06:55.158] [INFO] logger - Someone disconnect from 2222:1
+[2018-06-19 17:06:55.159] [INFO] logger - Someone disconnect from 222222:0
+[2018-06-19 17:06:56.843] [INFO] logger - Someone disconnect from room001:0
+[2018-06-19 17:06:56.844] [INFO] logger - Someone disconnect from 2222:0

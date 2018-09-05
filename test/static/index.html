@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>聊天IM</title>
+</head>
+<body>
+
+<h1>聊天IM</h1>
+
+<p>聊天室名字：<input type="text" id="chatRoom" name="chatRoom"/><input type="button" value="加入" id="buttonJoin"/></p>
+<div id="chatBox" style="width: 400px;height: 300px;background-color: aliceblue"></div>
+<div><input type="text" id="chatName" name="chatName" placeholder="称呼" style="width: 100px"/><input type="text"
+                                                                                                    id="chatTxt"
+                                                                                                    name="chatTxt"
+                                                                                                    placeholder="请输入需要发送的内容！"
+                                                                                                    style="width: 250px"/><input
+        type="button" value="发送" id="buttonSend"/></div>
+<script src="./js/jquery.js"></script>
+<script src="js/mysocket.js"></script>
+<script type="text/javascript">
+
+    function setupEvent(socket) {
+        socket.on('message-add', function (data) {
+            $('#chatBox').append("<div>" + data.message + "</div>");
+        })
+    };
+
+    $('#buttonSend').click(function (evt) {
+
+        $.ajax({
+            url: baseUrl + '/io/channel/broadcast',
+            type: 'POST',
+            data: {
+                channel: $('#chatRoom').val(),
+                event: 'message-add',
+                data: {
+                    name: $('#chatName').val(),
+                    message: $('#chatTxt').val()
+                }
+            },
+            success: function (data) {
+
+            }
+        });
+    });
+    $('#buttonJoin').click(function (evt) {
+        var chatRoomVal = $('#chatRoom').val();
+        var data = {
+            channel: chatRoomVal
+        };
+        $.post(baseUrl + '/io/channel/add', data, function (response) {
+            if (response.errcode) {
+                alert(response);
+            }
+            else {
+                createConn(chatRoomVal);
+            }
+        }, 'json');
+    });
+</script>
+
+</body>
+</html>
